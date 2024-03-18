@@ -25,3 +25,33 @@ for(let data of temperatures){
 let maxMinInfo = document.createElement('li');
     maxMinInfo.textContent = `Maximum temperature: ${maxTemperature}°C, Minimum temperature: ${minTemperature}°C`;
     temperatureList.appendChild(maxMinInfo);
+
+
+
+// for(let city=0;city<cities.length;city++){
+//     let temperature=Number(prompt(`Please enter temperature in ${cities[city]}`));
+//     temperatures.push({city,temperature});
+// }
+//     let temperatureList = document.getElementById('temperature-list');
+
+//     let minTemperature=Number.MAX_VALUE;
+//     let maxTemperature=Number.MIN_VALUE;
+
+// for (let data = 0; data < temperatures.length; data++) {
+//     let itemList = document.createElement('li');
+//     itemList.textContent = `In ${temperatures[data].city}: ${temperatures[data].temperature}°C`;
+//     temperatureList.appendChild(itemList);
+
+//     if (temperatures[data].temperature > maxTemperature) {
+//         maxTemperature = temperatures[data].temperature;
+//     }
+    
+//     if (temperatures[data].temperature < minTemperature) {
+//         minTemperature = temperatures[data].temperature;
+//     }
+// }
+
+// let maxMinInfo = document.createElement('li');
+//         maxMinInfo.textContent = `Maximum temperature: ${maxTemperature}°C, Minimum temperature: ${minTemperature}°C`;
+//         temperatureList.appendChild(maxMinInfo);
+
