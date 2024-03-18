@@ -2,6 +2,7 @@ let cities=['Saint-Petersburg','Marburg','Odessa'];// массив городо�
 
 let temperatures=[];// пустой массив, который будет хранить температуры для каждого города
 
+// С использованием цикла for..of
 for(let city of cities){
     let temperature=parseFloat(prompt(`Please enter temperature in the city ${city}:`));
     temperatures.push({city,temperature});
@@ -12,7 +13,7 @@ let maxTemperature=-Infinity;
 let minTemperature=Infinity;
 for(let data of temperatures){
     let listItem=document.createElement('li');
-    listItem.textContent= `${data.city}:${data.temperature}°C`;
+    listItem.textContent= `${data.city} : ${data.temperature}°C`;
     temperatureList.appendChild(listItem);
 
     if(data.temperature>maxTemperature){
@@ -22,12 +23,17 @@ for(let data of temperatures){
         minTemperature=data.temperature;
     }
 }
-let maxMinInfo = document.createElement('li');
-    maxMinInfo.textContent = `Maximum temperature: ${maxTemperature}°C, Minimum temperature: ${minTemperature}°C`;
-    temperatureList.appendChild(maxMinInfo);
+let maxTemperatureItem = document.createElement('li');
+maxTemperatureItem.textContent = `Maximum temperature: ${maxTemperature}°C`;
+temperatureList.appendChild(maxTemperatureItem);
+
+let minTemperatureItem = document.createElement('li');
+minTemperatureItem.textContent =`Minimum temperature: ${minTemperature}°C` ;
+temperatureList.appendChild(minTemperatureItem);
 
 
 
+// С использованием цикла for
 // for(let city=0;city<cities.length;city++){
 //     let temperature=Number(prompt(`Please enter temperature in ${cities[city]}`));
 //     temperatures.push({city,temperature});

@@ -1,0 +1,31 @@
+*{
+        font-family: "Elsie", serif;
+        font-weight: 400;
+        font-style: normal;
+}
+.body{
+    background-color: #FFEBCD;
+}
+.h1,.header,.section{
+    display: flex;
+    justify-content: center;
+}
+.h1{
+    font-family: "Elsie", serif;
+    font-weight: 900;
+    font-style: normal;
+}
+.list{
+    list-style-type:none;
+}
+li{
+    margin-bottom: 1.5em;
+}
+li:last-child,li:nth-child(4){
+    font-weight: 600;
+    padding-top: 1em;
+    margin-bottom: 0.5em;
+}
+li:nth-child(4){
+    border-top: 1px solid black; 
+}
