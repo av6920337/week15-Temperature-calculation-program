@@ -1,16 +1,21 @@
 let cities=['Saint-Petersburg','Marburg','Odessa'];// массив городов
 
-let temperatures=[];// пустой массив, который будет хранить температуры для каждого города
+let temperatures=[];// пустой массив, который будет хранить температуру для каждого города
 
 // С использованием цикла for..of
+// ф-ция prompt(),для ввода данных пользователем
 for(let city of cities){
     let temperature=parseFloat(prompt(`Please enter temperature in the city ${city}:`));
     temperatures.push({city,temperature});
 }
 
 let temperatureList=document.getElementById('temperature-list');
+
+// создание переменных,которые гарантированно будут больше и меньше любой возможной температуры;специальные значения Infinity (бесконечность) и -Infinity (минус бесконечность), которые можно использовать для создания переменных с гарантированно максимальным и минимальным значением.
 let maxTemperature=-Infinity;
 let minTemperature=Infinity;
+
+// Создан цикл для перебора элементов массивов;создание элементов списка и добавление их.
 for(let data of temperatures){
     let listItem=document.createElement('li');
     listItem.textContent= `${data.city} : ${data.temperature}°C`;
@@ -23,6 +28,8 @@ for(let data of temperatures){
         minTemperature=data.temperature;
     }
 }
+
+// Создание доп. элементов списка и выведение инфы о максимальной и минимальной температуры на экран . 
 let maxTemperatureItem = document.createElement('li');
 maxTemperatureItem.textContent = `Maximum temperature: ${maxTemperature}°C`;
 temperatureList.appendChild(maxTemperatureItem);
@@ -33,7 +40,7 @@ temperatureList.appendChild(minTemperatureItem);
 
 
 
-// С использованием цикла for
+// С использованием цикла for, нуждается в доработке.
 // for(let city=0;city<cities.length;city++){
 //     let temperature=Number(prompt(`Please enter temperature in ${cities[city]}`));
 //     temperatures.push({city,temperature});
