@@ -1,6 +1,6 @@
-let cities=['Saint-Petersburg','Marburg','Odessa'];// массив городов
+let cities=['Saint-Petersburg','Marburg','Odessa'];
 
-let temperatures=[];// пустой массив, который будет хранить температуру для каждого города
+let temperatures=[];
 
 // С использованием цикла for..of
 // ф-ция prompt(),для ввода данных пользователем
@@ -15,7 +15,7 @@ let temperatureList=document.getElementById('temperature-list');
 let maxTemperature=-Infinity;
 let minTemperature=Infinity;
 
-// Создан цикл для перебора элементов массивов;создание элементов списка и добавление их.
+
 for(let data of temperatures){
     let listItem=document.createElement('li');
     listItem.textContent= `${data.city} : ${data.temperature}°C`;
@@ -40,7 +40,7 @@ temperatureList.appendChild(minTemperatureItem);
 
 
 
-// С использованием цикла for, нуждается в доработке.
+// С использованием цикла for, !!!нуждается в доработке!!!.
 // for(let city=0;city<cities.length;city++){
 //     let temperature=Number(prompt(`Please enter temperature in ${cities[city]}`));
 //     temperatures.push({city,temperature});
